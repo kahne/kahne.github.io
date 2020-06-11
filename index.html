@@ -81,6 +81,10 @@
     <div class="content-section">
         <h2>What's New?</h2>
         <ul class="list-no-bullet">
+<!--            <li class="tight-li">-->
+<!--                <strong>2020-06-11</strong>:-->
+<!--                New arXiv <a href="https://arxiv.org/pdf/2006.05474.pdf" target="_blank">paper</a>.-->
+<!--            </li>-->
             <li class="tight-li">
                 <strong>2020-02-11</strong>:
                 One <a href="https://arxiv.org/pdf/2002.01320.pdf" target="_blank">paper</a> was accepted to
@@ -179,6 +183,25 @@
 </script>
 <script src="changhan.js"></script>
 <script>
+    addPaperItem(
+        "arXiv", "Improving Cross-Lingual Transfer Learning for End-to-End Speech Recognition with Speech Translation",
+        ["Me"], ["Juan Pino", "Jiatao Gu"],
+        "arXiv:2006.05474, 2020",
+        `Transfer learning from high-resource languages is known to be an efficient way to improve end-to-end
+        automatic speech recognition (ASR) for low-resource languages. Pre-trained or jointly trained encoder-decoder
+        models, however, do not share the language modeling (decoder) for the same language, which is likely to be
+        inefficient for distant target languages. We introduce speech-to-text translation (ST) as an auxiliary task to
+        incorporate additional knowledge of the target language and enable transferring from that target language.
+        Specifically, we first translate high-resource ASR transcripts into a target low-resource language, with which
+        a ST model is trained. Both ST and target ASR share the same attention-based encoder-decoder architecture and
+        vocabulary. The former task then provides a fully pre-trained model for the latter, bringing up to 24.6% word
+        error rate (WER) reduction to the baseline (direct transfer from high-resource ASR). We show that training ST
+        with human translations is not necessary. ST trained with machine translation (MT) pseudo-labels brings
+        consistent gains. It can even outperform those using human labels when transferred to target ASR by leveraging
+        only 500K MT examples. Even with pseudo-labels from low-resource MT (200K examples), ST-enhanced transfer brings
+        up to 8.9% WER reduction to direct transfer.`,
+        "static/interspeech2020.png", "https://arxiv.org/pdf/2006.05474.pdf"
+    );
     addPaperItem(
         "lrec2020", "CoVoST: A Diverse Multilingual Speech-To-Text Translation Corpus", ["Me"],
         ["Juan Pino", "Anne Wu", "Jiatao Gu"],
