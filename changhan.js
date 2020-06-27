@@ -29,12 +29,14 @@ function addPaperItem(
 `;
     let modal = genModal(`modalTrigger_${paperId}`, `modal_${paperId}`, title, abstract, imgUrl);
     let shareFirstAuthorship = (firstAuthors.length > 1);
+    let allFirstAuthorship = (otherAuthors.length === 0);
     let firstAuthorSuffix = shareFirstAuthorship ? "*" : "";
+    let sharedFirstAuthorshipFootnote = allFirstAuthorship ? 'alphabetical order' : 'equal contribution';
     let renderedAuthors = firstAuthors.map(
         name => name === "Me" ? `<u>Changhan Wang${firstAuthorSuffix}</u>` : `${name}${firstAuthorSuffix}`
     );
     renderedAuthors = renderedAuthors.concat(otherAuthors.map(name => name === "Me" ? "<u>Changhan Wang</u>" : name));
-    let authorLine = renderedAuthors.join(", ") + (shareFirstAuthorship ? " (* equal contribution)" : "") +  "<br/>";
+    let authorLine = renderedAuthors.join(", ") + (shareFirstAuthorship ? " (* " + sharedFirstAuthorshipFootnote + ")" : "") +  "<br/>";
 
     let publisherLine = `<i>${publisher}</i><br/>`;
     let paperBtn = "";

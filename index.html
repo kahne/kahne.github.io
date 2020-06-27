@@ -81,10 +81,6 @@
     <div class="content-section">
         <h2>What's New?</h2>
         <ul class="list-no-bullet">
-<!--            <li class="tight-li">-->
-<!--                <strong>2020-06-11</strong>:-->
-<!--                New arXiv <a href="https://arxiv.org/pdf/2006.05474.pdf" target="_blank">paper</a>.-->
-<!--            </li>-->
             <li class="tight-li">
                 <strong>2020-02-11</strong>:
                 One <a href="https://arxiv.org/pdf/2002.01320.pdf" target="_blank">paper</a> was accepted to
@@ -184,7 +180,8 @@
 <script src="changhan.js"></script>
 <script>
     addPaperItem(
-        "arXiv", "Improving Cross-Lingual Transfer Learning for End-to-End Speech Recognition with Speech Translation",
+        "arXiv2006_05474",
+        "Improving Cross-Lingual Transfer Learning for End-to-End Speech Recognition with Speech Translation",
         ["Me"], ["Juan Pino", "Jiatao Gu"],
         "arXiv:2006.05474, 2020",
         `Transfer learning from high-resource languages is known to be an efficient way to improve end-to-end
@@ -203,9 +200,35 @@
         "static/interspeech2020.png", "https://arxiv.org/pdf/2006.05474.pdf"
     );
     addPaperItem(
+        "arXiv2006_12124", "Self-Supervised Representations Improve End-to-End Speech Translation", ["Anne Wu"],
+        ["Me", "Juan Pino", "Jiatao Gu"], "arXiv:2006.12124, 2020",
+        `End-to-end speech-to-text translation can provide a simpler and smaller system but is facing the challenge of
+        data scarcity. Pre-training methods can leverage unlabeled data and have been shown to be effective on
+        data-scarce settings. In this work, we explore whether self-supervised pre-trained speech representations can
+        benefit the speech translation task in both high-and low-resource settings, whether they can transfer well to
+        other languages, and whether they can be effectively combined with other common methods that help improve
+        low-resource end-to-end speech translation such as using a pre-trained high-resource speech recognition system.
+        We demonstrate that self-supervised pre-trained features can consistently improve the translation performance,
+        and cross-lingual transfer allows to extend to a variety of languages without or with little tuning.`,
+        "", "https://arxiv.org/pdf/2006.12124.pdf"
+    );
+    addPaperItem("iwslt2020", "Findings of the IWSLT 2020 Evaluation Campaign",
+        ["Ebrahim Ansari", "Nguyen Bach", "Ondřej Bojar", "Roldano Cattoni", "Fahim Dalvi", "Nadir Durrani",
+            "Marcello Federico", "Christian Federmann", "Jiatao Gu", "Fei Huang", "Kevin Knight", "Xutai Ma",
+            "Ajay Nagesh", "Matteo Negri", "Jan Niehues", "Juan Pino", "Elizabeth Salesky", "Xing Shi",
+            "Sebastian Stüker", "Marco Turchi", "Alex Waibel", "Me"], [],
+        "Proceedings of the 17th International Conference on Spoken Language Translation",
+        `The evaluation campaign of the International Conference on Spoken Language Translation (IWSLT 2020) featured
+        this year six challenge tracks:(i) Simultaneous speech translation,(ii) Video speech translation,(iii) Offline
+        speech translation,(iv) Conversational speech translation,(v) Open domain translation, and (vi) Non-native
+        speech translation. A total of teams participated in at least one of the tracks. This paper introduces each
+        track’s goal, data and evaluation metrics, and reports the results of the received submissions.`,
+        "", "https://www.aclweb.org/anthology/2020.iwslt-1.1.pdf"
+    );
+    addPaperItem(
         "lrec2020", "CoVoST: A Diverse Multilingual Speech-To-Text Translation Corpus", ["Me"],
         ["Juan Pino", "Anne Wu", "Jiatao Gu"],
-        "To appear in Proceedings of the Twelfth International Conference on Language Resources and Evaluation (LREC), 2020",
+        "Proceedings of the Twelfth International Conference on Language Resources and Evaluation (LREC), 2020",
         `Spoken language translation has recently witnessed a resurgence in popularity, thanks to the development of
         end-to-end models and the creation of new corpora, such as Augmented LibriSpeech and MuST-C. Existing datasets
         involve language pairs with English as a source language, involve very specific domains or are low resource.
@@ -215,12 +238,13 @@
         knowledge, the first end-to-end many-to-one multilingual models for spoken language translation. CoVoST is
         released under CC0 license and free to use. We also provide additional evaluation data derived from Tatoeba
         under CC licenses.`,
-        "", "https://arxiv.org/pdf/2002.01320.pdf", "https://github.com/facebookresearch/covost"
+        "", "http://www.lrec-conf.org/proceedings/lrec2020/pdf/2020.lrec-1.517.pdf",
+        "https://github.com/facebookresearch/covost"
     );
     addPaperItem(
         "aaai2020", "Neural Machine Translation with Byte-Level Subwords",
         ["Me"], ["Kyunghyun Cho", "Jiatao Gu"],
-        "To appear in The Thirty-Fourth AAAI Conference on Artificial Intelligence (AAAI), 2020",
+        "The Thirty-Fourth AAAI Conference on Artificial Intelligence (AAAI), 2020",
         `Almost all existing machine translation models are built on top of character-based vocabularies: characters,
         subwords or words. Rare characters from noisy text or character-rich languages such as Japanese and Chinese
         however can unnecessarily take up vocabulary slots and limit its compactness. Representing text at the level of
