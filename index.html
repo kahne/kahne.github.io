@@ -185,6 +185,26 @@
 <script src="changhan.js"></script>
 <script>
     addPaperItem(
+        "arXiv2007_16193",
+        "SimulEval: An Evaluation Toolkit for Simultaneous Translation",
+        ["Xutai Ma"], [" Mohammad Javad Dousti", "Me", "Jiatao Gu", "Juan Pino"],
+        "arXiv:2007.16193",
+        `Simultaneous translation on both text and speech focuses on a real-time and low-latency scenario where the
+        model starts translating before reading the complete source input. Evaluating simultaneous translation models
+        is more complex than offline models because the latency is another factor to consider in addition to translation
+        quality. The research community, despite its growing focus on novel modeling approaches to simultaneous
+        translation, currently lacks a universal evaluation procedure. Therefore, we present SimulEval, an easy-to-use
+        and general evaluation toolkit for both simultaneous text and speech translation. A server-client scheme is
+        introduced to create a simultaneous translation scenario, where the server sends source input and receives
+        predictions for evaluation and the client executes customized policies. Given a policy, it automatically
+        performs simultaneous decoding and collectively reports several popular latency metrics. We also adapt latency
+        metrics from text simultaneous translation to the speech task. Additionally, SimulEval is equipped with a
+        visualization interface to provide better understanding of the simultaneous decoding process of a system.
+        SimulEval has already been extensively used for the IWSLT 2020 shared task on simultaneous speech translation.
+        Code will be released upon publication.`,
+        "", "https://arxiv.org/pdf/2007.16193.pdf"
+    );
+    addPaperItem(
         "arXiv2006_05474",
         "Improving Cross-Lingual Transfer Learning for End-to-End Speech Recognition with Speech Translation",
         ["Me"], ["Juan Pino", "Jiatao Gu"],
