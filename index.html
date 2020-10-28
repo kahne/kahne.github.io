@@ -82,6 +82,16 @@
         <h2>What's New?</h2>
         <ul class="list-no-bullet">
             <li class="tight-li">
+                <strong>2020-09-15</strong>:
+                One <a href="https://arxiv.org/pdf/2007.16193.pdf" target="_blank">demo paper</a> was accepted
+                to <strong>EMNLP 2020</strong>.
+            </li>
+            <li class="tight-li">
+                <strong>2020-09-10</strong>:
+                One <a href="https://arxiv.org/pdf/2010.05171.pdf" target="_blank">demo paper</a> was accepted
+                to <strong>AACL 2020</strong>.
+            </li>
+            <li class="tight-li">
                 <strong>2020-07-24</strong>:
                 Two papers (<a href="https://arxiv.org/pdf/2006.05474.pdf" target="_blank">1</a>,<a href="https://arxiv.org/pdf/2006.12124.pdf" target="_blank">2</a>)
                 were accepted to <strong>INTERSPEECH 2020</strong>.
@@ -185,10 +195,25 @@
 <script src="changhan.js"></script>
 <script>
     addPaperItem(
-        "arXiv2007_16193",
+        "aacl2020",
+        "fairseq S2T: Fast Speech-to-Text Modeling with fairseq",
+        ["Me"], ["Yun Tang", "Xutai Ma", "Anne Wu", "Dmytro Okhonko", "Juan Pino"],
+        "To appear in the Proceedings of the 2020 Conference of the Asian Chapter of the Association for Computational Linguistics (AACL): System Demonstrations, 2020",
+        `We introduce fairseq S2T, a fairseq extension for speech-to-text (S2T) modeling tasks such as end-to-end
+        speech recognition and speech-to-text translation. It follows fairseq's careful design for scalability and
+        extensibility. We provide end-to-end workflows from data pre-processing, model training to offline (online)
+        inference. We implement state-of-the-art RNN-based as well as Transformer-based models and open-source
+        detailed training recipes. Fairseq's machine translation models and language models can be seamlessly
+        integrated into S2T workflows for multi-task learning or transfer learning. Fairseq S2T documentation and
+        examples are available at
+        <a href="https://github.com/pytorch/fairseq/tree/master/examples/speech_to_text" target="_blank">https://github.com/pytorch/fairseq/tree/master/examples/speech_to_text</a>.`,
+        "", "https://arxiv.org/pdf/2010.05171.pdf", "https://github.com/pytorch/fairseq/tree/master/examples/speech_to_text"
+    )
+    addPaperItem(
+        "emnlp2020",
         "SimulEval: An Evaluation Toolkit for Simultaneous Translation",
         ["Xutai Ma"], [" Mohammad Javad Dousti", "Me", "Jiatao Gu", "Juan Pino"],
-        "arXiv:2007.16193",
+        "To appear in the Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP): System Demonstrations, 2020",
         `Simultaneous translation on both text and speech focuses on a real-time and low-latency scenario where the
         model starts translating before reading the complete source input. Evaluating simultaneous translation models
         is more complex than offline models because the latency is another factor to consider in addition to translation
@@ -239,10 +264,10 @@
         "", "https://arxiv.org/pdf/2006.12124.pdf"
     );
     addPaperItem("iwslt2020", "Findings of the IWSLT 2020 Evaluation Campaign",
-        ["Ebrahim Ansari", "Nguyen Bach", "Ondřej Bojar", "Roldano Cattoni", "Fahim Dalvi", "Nadir Durrani",
+        ["Ebrahim Ansari"], ["Nguyen Bach", "Ondřej Bojar", "Roldano Cattoni", "Fahim Dalvi", "Nadir Durrani",
             "Marcello Federico", "Christian Federmann", "Jiatao Gu", "Fei Huang", "Kevin Knight", "Xutai Ma",
             "Ajay Nagesh", "Matteo Negri", "Jan Niehues", "Juan Pino", "Elizabeth Salesky", "Xing Shi",
-            "Sebastian Stüker", "Marco Turchi", "Alex Waibel", "Me"], [],
+            "Sebastian Stüker", "Marco Turchi", "Alex Waibel", "Me"],
         "Proceedings of the 17th International Conference on Spoken Language Translation",
         `The evaluation campaign of the International Conference on Spoken Language Translation (IWSLT 2020) featured
         this year six challenge tracks:(i) Simultaneous speech translation,(ii) Video speech translation,(iii) Offline
@@ -265,7 +290,8 @@
         released under CC0 license and free to use. We also provide additional evaluation data derived from Tatoeba
         under CC licenses.`,
         "", "http://www.lrec-conf.org/proceedings/lrec2020/pdf/2020.lrec-1.517.pdf",
-        "https://github.com/facebookresearch/covost"
+        "https://github.com/facebookresearch/covost", "", "",
+        "https://ai.facebook.com/blog/covost-v2-expanding-the-largest-most-diverse-multilingual-speech-to-text-translation-data-set"
     );
     addPaperItem(
         "aaai2020", "Neural Machine Translation with Byte-Level Subwords",
