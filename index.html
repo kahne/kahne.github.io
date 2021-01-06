@@ -82,6 +82,18 @@
         <h2>What's New?</h2>
         <ul class="list-no-bullet">
             <li class="tight-li">
+                <li class="tight-li">
+                <strong>2020-09-30</strong>:
+                One <a href="https://arxiv.org/pdf/2011.00747.pdf" target="_blank">paper</a> was accepted
+                to <strong>COLING 2020</strong>.
+            </li>
+                <strong>2020-09-30</strong>:
+                One <a href="https://arxiv.org/pdf/2011.08298.pdf" target="_blank">paper</a> was accepted
+                to <strong>WMT 2020</strong>. Our news translation system won the <strong>1st place</strong> in the
+                Inuktitut-English (constrained) track. We are also ranked in the <strong>2nd place</strong> in the
+                English-Tamil and Tamil-English (constrained) tracks.
+            </li>
+            <li class="tight-li">
                 <strong>2020-09-15</strong>:
                 One <a href="https://arxiv.org/pdf/2007.16193.pdf" target="_blank">demo paper</a> was accepted
                 to <strong>EMNLP 2020</strong>.
@@ -141,9 +153,9 @@
             </li>
             <li class="tight-li">
                 <strong>2018-05-04</strong>:
-                Our <a href="https://www.aclweb.org/anthology/W18-3221.pdf" target="_blank">system</a> won the
-                <strong>1st place</strong> in MS Arabic-Egyptian code-switched Named Entity Recognition shared task
-                (<strong>ACL 2018 CALCS workshop</strong>).
+                One <a href="https://www.aclweb.org/anthology/W18-3221.pdf" target="_blank">paper</a> was accepted to
+                <strong>ACL 2018 CALCS workshop</strong>. Our system won the <strong>1st place</strong> in the MS
+                Arabic-Egyptian code-switched Named Entity Recognition shared task.
             </li>
         </ul>
     </div>
@@ -195,10 +207,60 @@
 <script src="changhan.js"></script>
 <script>
     addPaperItem(
+        "arxiv_2101_00390",
+        "VoxPopuli: A Large-Scale Multilingual Speech Corpus for Representation Learning, Semi-Supervised Learning and Interpretation",
+        ["Me"], ["Morgane Rivière", "Ann Lee", "Anne Wu", "Chaitanya Talnikar", "Daniel Haziza", "Mary Williamson", "Juan Pino", "Emmanuel Dupoux"],
+        "arXiv:2101.00390",
+        `We introduce VoxPopuli, a large-scale multilingual corpus providing 100K hours of unlabelled speech data in
+        23 languages. It is the largest open data to date for unsupervised representation learning as well as
+        semi-supervised learning. VoxPopuli also contains 1.8K hours of transcribed speeches in 16 languages and their
+        aligned oral interpretations into 5 other languages totaling 5.1K hours. We provide speech recognition baselines
+        and validate the versatility of VoxPopuli unlabelled data in semi-supervised learning under challenging
+        out-of-domain settings. We will release the corpus at
+        <a href="https://github.com/facebookresearch/voxpopuli" target="_blank">https://github.com/facebookresearch/voxpopuli</a>
+        under an open license.`,
+        "", "https://arxiv.org/pdf/2101.00390.pdf"
+    )
+    addPaperItem(
+        "arxiv_2010_12829",
+        "Multilingual Speech Translation with Efficient Finetuning of Pretrained Models",
+        ["Xian Li", "Me"], ["Yun Tang", "Chau Tran", "Yuqing Tang", "Juan Pino", "Alexei Baevski", "Alexis Conneau", "Michael Auli"],
+        "arXiv:2010.12829",
+        `We present a simple yet effective approach to build multilingual speech-to-text (ST) translation by efficient
+        transfer learning from pretrained speech encoder and text decoder. Our key finding is that a minimalistic LNA
+        (LayerNorm and Attention) finetuning can achieve zero-shot crosslingual and cross-modality transfer ability by
+        only finetuning less than 10% of the pretrained parameters. This enables effectively leveraging large pretrained
+         models with low training cost. Using wav2vec 2.0 for acoustic modeling, and mBART for multilingual text
+         generation, our approach advanced the new state-of-the-art for 34 translation directions (and surpassing
+         cascaded ST for 23 of them) on large-scale multilingual ST benchmark CoVoST 2 (+6.4 BLEU on average across 15
+         En-X directions and +5.1 BLEU on average across 19 X-En directions). Our approach demonstrates strong zero-shot
+         performance in a many-to-many multilingual model (+5.7 BLEU on average across 18 non-English directions),
+         making it an appealing approach for attaining high-quality speech translation with improved parameter and data
+         efficiency.`,
+        "static/arxiv_2010.12829.png", "https://arxiv.org/pdf/2010.12829.pdf"
+    )
+    addPaperItem(
+        "coling2020",
+        "Dual-decoder Transformer for Joint Automatic Speech Recognition and Multilingual Speech Translation",
+        ["Hang Le"], ["Juan Pino", "Me", "Jiatao Gu", "Didier Schwab", "Laurent Besacier"],
+        "Proceedings of the 28th International Conference on Computational Linguistics (COLING), 2020",
+        `We introduce dual-decoder Transformer, a new model architecture that jointly performs automatic speech
+        recognition (ASR) and multilingual speech translation (ST). Our models are based on the original Transformer
+        architecture (Vaswani et al., 2017) but consist of two decoders, each responsible for one task (ASR or ST).
+        Our major contribution lies in how these decoders interact with each other: one decoder can attend to different
+        information sources from the other via a dual-attention mechanism. We propose two variants of these
+        architectures corresponding to two different levels of dependencies between the decoders, called the parallel
+        and cross dual-decoder Transformers, respectively. Extensive experiments on the MuST-C dataset show that our
+        models outperform the previously-reported highest translation performance in the multilingual settings, and
+        outperform as well bilingual one-to-one results. Furthermore, our parallel models demonstrate no trade-off
+        between ASR and ST compared to the vanilla multi-task architecture.`,
+        "static/coling2020.png", "https://arxiv.org/pdf/2011.00747.pdf", "https://github.com/formiel/speech-translation"
+    )
+    addPaperItem(
         "aacl2020",
         "fairseq S2T: Fast Speech-to-Text Modeling with fairseq",
         ["Me"], ["Yun Tang", "Xutai Ma", "Anne Wu", "Dmytro Okhonko", "Juan Pino"],
-        "To appear in the Proceedings of the 2020 Conference of the Asian Chapter of the Association for Computational Linguistics (AACL): System Demonstrations, 2020",
+        "Proceedings of the 2020 Conference of the Asian Chapter of the Association for Computational Linguistics (AACL): System Demonstrations, 2020",
         `We introduce fairseq S2T, a fairseq extension for speech-to-text (S2T) modeling tasks such as end-to-end
         speech recognition and speech-to-text translation. It follows fairseq's careful design for scalability and
         extensibility. We provide end-to-end workflows from data pre-processing, model training to offline (online)
@@ -207,13 +269,34 @@
         integrated into S2T workflows for multi-task learning or transfer learning. Fairseq S2T documentation and
         examples are available at
         <a href="https://github.com/pytorch/fairseq/tree/master/examples/speech_to_text" target="_blank">https://github.com/pytorch/fairseq/tree/master/examples/speech_to_text</a>.`,
-        "", "https://arxiv.org/pdf/2010.05171.pdf", "https://github.com/pytorch/fairseq/tree/master/examples/speech_to_text"
+        "", "https://arxiv.org/pdf/2010.05171.pdf",
+        "https://github.com/pytorch/fairseq/tree/master/examples/speech_to_text", "", "static/aacl2020.pdf"
+    )
+    addPaperItem(
+        "wmt2020",
+        "Facebook AI's WMT20 News Translation Task Submission",
+        ["Peng-Jen Chen"], ["Ann Lee", "Me", "Naman Goyal", "Angela Fan", "Mary Williamson", "Jiatao Gu"],
+        "Proceedings of the Fifth Conference on Machine Translation (WMT), 2020",
+        `This paper describes Facebook AI’s submission to WMT20 shared news translation task. We focus on the low
+        resource setting and participate in two language pairs, Tamil <-> English and Inuktitut <-> English, where
+        there are limited out-of-domain bitext and monolingual data. We approach the low resource problem using two
+        main strategies, leveraging all available data and adapting the system to the target news domain. We explore
+        techniques that leverage bitext and monolingual data from all languages, such as self-supervised model
+        pretraining, multilingual models, data augmentation, and reranking. To better adapt the translation system to
+        the test domain, we explore dataset tagging and fine-tuning on in-domain data. We observe that different
+        techniques provide varied improvements based on the available data of the language pair. Based on the finding,
+        we integrate these techniques into one training pipeline. For En->Ta, we explore an unconstrained setup with
+        additional Tamil bitext and monolingual data and show that further improvement can be obtained. On the test set,
+        our best submitted systems achieve 21.5 and 13.7 BLEU for Ta->En and En->Ta respectively, and 27.9 and 13.0 for
+        Iu->En and En->Iu respectively.`,
+        "", "https://www.aclweb.org/anthology/2020.wmt-1.8.pdf",
+        "https://github.com/pytorch/fairseq/tree/master/examples/wmt20"
     )
     addPaperItem(
         "emnlp2020",
         "SimulEval: An Evaluation Toolkit for Simultaneous Translation",
         ["Xutai Ma"], [" Mohammad Javad Dousti", "Me", "Jiatao Gu", "Juan Pino"],
-        "To appear in the Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP): System Demonstrations, 2020",
+        "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP): System Demonstrations, 2020",
         `Simultaneous translation on both text and speech focuses on a real-time and low-latency scenario where the
         model starts translating before reading the complete source input. Evaluating simultaneous translation models
         is more complex than offline models because the latency is another factor to consider in addition to translation
@@ -227,13 +310,13 @@
         visualization interface to provide better understanding of the simultaneous decoding process of a system.
         SimulEval has already been extensively used for the IWSLT 2020 shared task on simultaneous speech translation.
         Code will be released upon publication.`,
-        "", "https://arxiv.org/pdf/2007.16193.pdf"
+        "", "https://arxiv.org/pdf/2007.16193.pdf", "https://github.com/facebookresearch/SimulEval"
     );
     addPaperItem(
-        "arXiv2006_05474",
+        "interspeech2020",
         "Improving Cross-Lingual Transfer Learning for End-to-End Speech Recognition with Speech Translation",
         ["Me"], ["Juan Pino", "Jiatao Gu"],
-        "To Appear in the 21st Annual Conference of the International Speech Communication Association (Interspeech), 2020",
+        "The 21st Annual Conference of the International Speech Communication Association (INTERSPEECH), 2020",
         `Transfer learning from high-resource languages is known to be an efficient way to improve end-to-end
         automatic speech recognition (ASR) for low-resource languages. Pre-trained or jointly trained encoder-decoder
         models, however, do not share the language modeling (decoder) for the same language, which is likely to be
@@ -247,12 +330,12 @@
         consistent gains. It can even outperform those using human labels when transferred to target ASR by leveraging
         only 500K MT examples. Even with pseudo-labels from low-resource MT (200K examples), ST-enhanced transfer brings
         up to 8.9% WER reduction to direct transfer.`,
-        "static/interspeech2020.png", "https://arxiv.org/pdf/2006.05474.pdf"
+        "static/interspeech2020.png", "https://arxiv.org/pdf/2006.05474.pdf", "", "", "static/interspeech2020.pdf"
     );
     addPaperItem(
-        "arXiv2006_12124", "Self-Supervised Representations Improve End-to-End Speech Translation", ["Anne Wu"],
+        "interspeech2020_2", "Self-Supervised Representations Improve End-to-End Speech Translation", ["Anne Wu"],
         ["Me", "Juan Pino", "Jiatao Gu"],
-        "To Appear in the 21st Annual Conference of the International Speech Communication Association (Interspeech), 2020",
+        "The 21st Annual Conference of the International Speech Communication Association (INTERSPEECH), 2020",
         `End-to-end speech-to-text translation can provide a simpler and smaller system but is facing the challenge of
         data scarcity. Pre-training methods can leverage unlabeled data and have been shown to be effective on
         data-scarce settings. In this work, we explore whether self-supervised pre-trained speech representations can
@@ -268,7 +351,7 @@
             "Marcello Federico", "Christian Federmann", "Jiatao Gu", "Fei Huang", "Kevin Knight", "Xutai Ma",
             "Ajay Nagesh", "Matteo Negri", "Jan Niehues", "Juan Pino", "Elizabeth Salesky", "Xing Shi",
             "Sebastian Stüker", "Marco Turchi", "Alex Waibel", "Me"],
-        "Proceedings of the 17th International Conference on Spoken Language Translation",
+        "Proceedings of the 17th International Conference on Spoken Language Translation, 2020",
         `The evaluation campaign of the International Conference on Spoken Language Translation (IWSLT 2020) featured
         this year six challenge tracks:(i) Simultaneous speech translation,(ii) Video speech translation,(iii) Offline
         speech translation,(iv) Conversational speech translation,(v) Open domain translation, and (vi) Non-native
