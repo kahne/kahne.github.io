@@ -29,6 +29,7 @@ li.tight-li{
     margin-right: 8%;
     width: 28%;
     left: 0;
+    text-align: left;
 }
 
 
@@ -36,7 +37,7 @@ li.tight-li{
     background: #ffffff;
     color: #000000;
     margin-left: 36%;
-    margin-right: 40%;
+    margin-right: 36%;
     height: 100%;
     top: 0;
 }
